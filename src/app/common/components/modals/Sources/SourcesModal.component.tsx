@@ -43,7 +43,7 @@ const SourcesModal = () => {
                 <h1>{category?.title}</h1>
             </div>
             <div className="mainContentContainer">
-                {subCategories?.map(({ sourceLinks, title }) => (
+                {subCategories?.flatMap((i) => [i, i, i]).map(({ sourceLinks, title }) => (
                     <>
                         <h1 className={(subCategories?.length === 1) ? 'highlightedHeader' : undefined}>
                             {title}
